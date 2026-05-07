@@ -1,5 +1,5 @@
 services:
-  claude-code:
+  ai-terminal:
     build: .
     image: ai-terminal:latest
     container_name: ai-terminal
