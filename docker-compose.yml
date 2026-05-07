@@ -1,11 +1,16 @@
 services:
   claude-code:
     build: .
-    image: claude-code:latest
-    container_name: claude-code
+    image: ai-terminal:latest
+    container_name: ai-terminal
     stdin_open: true
     tty: true
+    environment:
+      TERM: xterm-256color
+      COLORTERM: truecolor
     volumes:
       - ./workspace:/workspace
-      - ./.claude:/home/claude/.claude
+      - ./.claude:/home/ubuntu/.claude
+      - ./.codex:/home/ubuntu/.codex
+      - ./.gemini:/home/ubuntu/.gemini
     working_dir: /workspace

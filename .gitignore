@@ -1,0 +1,44 @@
+# Configuration directories with API keys and credentials
+.claude/
+.codex/
+.gemini/
+
+# Configuration files with sensitive data
+.codex.json
+.gemini.json
+.env
+.env.local
+.env.*.local
+
+# User workspace
+workspace/
+
+# Node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# IDE and editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS
+Thumbs.db
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
