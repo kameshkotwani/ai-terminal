@@ -13,4 +13,5 @@ services:
       - ./.claude:/home/ubuntu/.claude
       - ./.codex:/home/ubuntu/.codex
       - ./.gemini:/home/ubuntu/.gemini
+      - ./.copilot:/home/ubuntu/.copilot
     working_dir: /workspace

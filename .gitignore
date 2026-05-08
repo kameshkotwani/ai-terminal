@@ -2,7 +2,7 @@
 .claude/
 .codex/
 .gemini/
-
+.copilot/
 # Configuration files with sensitive data
 .codex.json
 .gemini.json

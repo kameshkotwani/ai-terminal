@@ -12,7 +12,6 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     jq \
     vim \
-    openssh-client \
     libssl-dev \
     && rm -rf /var/lib/apt/lists/*
 
@@ -33,12 +32,15 @@ RUN bash -c '. "$HOME/.nvm/nvm.sh" && nvm install 24 && node -v && npm -v'
 # Set PATH early so installation scripts can detect it
 ENV PATH="/home/ubuntu/.local/bin:/home/ubuntu/.bun/bin:/home/ubuntu/.nvm/versions/node/v24.15.0/bin:$PATH"
 
+# Install Claude CLI and Bun
 RUN curl -fsSL https://claude.ai/install.sh | bash
 RUN curl -fsSL https://bun.sh/install | bash
 
+# copilot CLI
+RUN curl -fsSL https://gh.io/copilot-install | bash
+
 # Install Codex and Gemini CLI globally
-# RUN npm config set prefix "/home/ubuntu/.npm-global"
-RUN npm install -g @openai/codex @google/gemini-cli
+RUN npm install -g @openai/codex @google/gemini-cli 
 
 WORKDIR /workspace
 
