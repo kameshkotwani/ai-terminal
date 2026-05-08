@@ -32,14 +32,22 @@ This environment is built on **Ubuntu 24.04** and comes packed with:
 
 ### 🚀 Launching the Environment
 
-1. **Clone the repository and spin up the container:**
+
+1. **Run setup.sh to create directories:**
+   ```bash
+   chmod +x setup.sh
+   ./setup.sh
+   ```
+   (It will create all the required directories)
+
+2. **Run the Docker Container (detached mode):**
    ```bash
    docker-compose up -d
    ```
 
-2. **Attach to the terminal:**
+3. **Attach to the terminal:**
    ```bash
-   docker exec -it ai-terminal /bin/bash
+   docker exec -it ai-terminal bash
    ```
 
 ### 📁 Persistence & Workspace
